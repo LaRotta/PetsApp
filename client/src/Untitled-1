@@ -1,0 +1,17 @@
+//one way
+  <p>fido | dog | jsdlafkksadlfjsdfksdl kl fksdl <a href="#" >edit</a></p>
+
+  $('a').on('click', function(){
+    var arr = $(this).parent().text().split('|');
+    var name = arr[0].trim();
+    var type = arr[1].trim();
+  })
+
+//another way
+  <p>fido | dog | jsdlafkksadlfjsdfksdl kl fksdl <a href="#" data-id="3" data-name="fido" data-type="dog">edit</a></p>
+
+  $('a').on('click', function(){
+    var id = $(this).attr('data-id');
+    var name = $(this).attr('data-name');
+    var type = $(this).attr('data-type');
+  })
